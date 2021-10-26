@@ -16,9 +16,9 @@ class IngameActivityEasy : AppCompatActivity() {
         setContentView(R.layout.activity_ingame_easy)
 
         boardValues.shuffle()
-        for (i in 1..6){
-            cards.add(findViewById(resources.getIdentifier("card$i", "id", packageName)))
-            cards[i-1].setOnClickListener { v ->  processButtonClick(v, i)}
+        for (index in 1..6){
+            cards.add(findViewById(resources.getIdentifier("card$index", "id", packageName)))
+            cards[index-1].setOnClickListener { processButtonClick(it, index) }
         }
 
     }
