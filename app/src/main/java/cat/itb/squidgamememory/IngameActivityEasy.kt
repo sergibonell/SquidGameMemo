@@ -2,18 +2,30 @@ package cat.itb.squidgamememory
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
+import android.view.View
 import android.widget.ImageButton
 
 class IngameActivityEasy : AppCompatActivity() {
-    private lateinit var cookies : Array<ImageButton>
+    private var cards = mutableListOf<ImageButton>()
+    //TODO: Add sprites to project and initialize array with ids
+    private var boardValues = arrayOf(0, 0, 1, 1, 2, 2)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_ingame_easy)
 
-        for (i in 1..6)
-            cookies[i] = findViewById(resources.getIdentifier("cookie$i", "drawable", packageName))
+        boardValues.shuffle()
+        for (i in 1..6){
+            cards.add(findViewById(resources.getIdentifier("card$i", "id", packageName)))
+            cards[i-1].setOnClickListener { v ->  processButtonClick(v, i)}
+        }
 
-        print("debug")
+    }
+
+    // Cada cop que es clica un botó aquest mètode rep la View del botó i l'índex d'aquest
+    fun processButtonClick(cardButton: View, index: Int){
+        Log.d("DEBUG", cardButton.toString())
+        Log.d("DEBUG", index.toString())
     }
 }
