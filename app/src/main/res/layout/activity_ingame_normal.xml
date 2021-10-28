@@ -7,7 +7,7 @@
     tools:context=".IngameActivityNormal">
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/game_timer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
@@ -19,7 +19,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageButton
-        android:id="@+id/imageButton"
+        android:id="@+id/pause_button"
         android:layout_width="64dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
@@ -30,119 +30,119 @@
         app:srcCompat="@drawable/ic_baseline_pause_24" />
 
     <ImageButton
-        android:id="@+id/cookie1"
+        android:id="@+id/card1"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="32dp"
         android:layout_marginTop="16dp"
         android:background="@android:color/transparent"
         android:padding="10dp"
         android:scaleType="fitCenter"
-        app:layout_constraintBottom_toTopOf="@+id/cookie3"
-        app:layout_constraintEnd_toStartOf="@+id/cookie2"
+        app:layout_constraintBottom_toTopOf="@+id/card3"
+        app:layout_constraintEnd_toStartOf="@+id/card2"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/game_timer"
         app:srcCompat="@drawable/empty" />
 
     <ImageButton
-        android:id="@+id/cookie2"
+        android:id="@+id/card2"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
+        android:layout_marginEnd="32dp"
         android:background="@android:color/transparent"
         android:padding="10dp"
         android:scaleType="fitCenter"
-        app:layout_constraintBottom_toTopOf="@+id/cookie4"
+        app:layout_constraintBottom_toTopOf="@+id/card4"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/cookie1"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintStart_toEndOf="@+id/card1"
+        app:layout_constraintTop_toBottomOf="@+id/game_timer"
         app:srcCompat="@drawable/empty" />
 
     <ImageButton
-        android:id="@+id/cookie3"
+        android:id="@+id/card3"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="32dp"
         android:background="@android:color/transparent"
         android:paddingVertical="10dp"
         android:scaleType="fitCenter"
-        app:layout_constraintBottom_toTopOf="@+id/cookie5"
-        app:layout_constraintEnd_toStartOf="@+id/cookie4"
+        app:layout_constraintBottom_toTopOf="@+id/card5"
+        app:layout_constraintEnd_toStartOf="@+id/card4"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cookie1"
+        app:layout_constraintTop_toBottomOf="@+id/card1"
         app:srcCompat="@drawable/empty" />
 
     <ImageButton
-        android:id="@+id/cookie4"
+        android:id="@+id/card4"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginEnd="16dp"
+        android:layout_marginEnd="32dp"
         android:background="@android:color/transparent"
         android:padding="10dp"
         android:scaleType="fitCenter"
-        app:layout_constraintBottom_toTopOf="@+id/cookie6"
+        app:layout_constraintBottom_toTopOf="@+id/card6"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/cookie3"
-        app:layout_constraintTop_toBottomOf="@+id/cookie2"
+        app:layout_constraintStart_toEndOf="@+id/card3"
+        app:layout_constraintTop_toBottomOf="@+id/card2"
         app:srcCompat="@drawable/empty" />
 
     <ImageButton
-        android:id="@+id/cookie5"
+        android:id="@+id/card5"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="32dp"
         android:background="@android:color/transparent"
         android:padding="10dp"
         android:scaleType="fitCenter"
-        app:layout_constraintBottom_toTopOf="@+id/cookie7"
-        app:layout_constraintEnd_toStartOf="@+id/cookie6"
+        app:layout_constraintBottom_toTopOf="@+id/card7"
+        app:layout_constraintEnd_toStartOf="@+id/card6"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cookie3"
+        app:layout_constraintTop_toBottomOf="@+id/card3"
         app:srcCompat="@drawable/empty" />
 
     <ImageButton
-        android:id="@+id/cookie6"
+        android:id="@+id/card6"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginEnd="16dp"
+        android:layout_marginEnd="32dp"
         android:background="@android:color/transparent"
         android:padding="10dp"
         android:scaleType="fitCenter"
-        app:layout_constraintBottom_toTopOf="@+id/cookie8"
+        app:layout_constraintBottom_toTopOf="@+id/card8"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/cookie5"
-        app:layout_constraintTop_toBottomOf="@+id/cookie4"
+        app:layout_constraintStart_toEndOf="@+id/card5"
+        app:layout_constraintTop_toBottomOf="@+id/card4"
         app:srcCompat="@drawable/empty" />
 
     <ImageButton
-        android:id="@+id/cookie7"
+        android:id="@+id/card7"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="32dp"
         android:layout_marginBottom="16dp"
         android:background="@android:color/transparent"
         android:padding="10dp"
         android:scaleType="fitCenter"
-        app:layout_constraintBottom_toTopOf="@+id/imageButton"
-        app:layout_constraintEnd_toStartOf="@id/cookie8"
+        app:layout_constraintBottom_toTopOf="@+id/pause_button"
+        app:layout_constraintEnd_toStartOf="@id/card8"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cookie5"
+        app:layout_constraintTop_toBottomOf="@+id/card5"
         app:srcCompat="@drawable/empty" />
 
     <ImageButton
-        android:id="@+id/cookie8"
+        android:id="@+id/card8"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginEnd="16dp"
+        android:layout_marginEnd="32dp"
         android:layout_marginBottom="16dp"
         android:background="@android:color/transparent"
         android:padding="10dp"
         android:scaleType="fitCenter"
-        app:layout_constraintBottom_toTopOf="@+id/imageButton"
+        app:layout_constraintBottom_toTopOf="@+id/pause_button"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/cookie7"
-        app:layout_constraintTop_toBottomOf="@+id/cookie6"
+        app:layout_constraintStart_toEndOf="@+id/card7"
+        app:layout_constraintTop_toBottomOf="@+id/card6"
         app:srcCompat="@drawable/empty" />
 
 

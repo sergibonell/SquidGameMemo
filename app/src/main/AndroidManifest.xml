@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SquidGameMemory">
         <activity
+            android:name=".IngameActivityHard"
+            android:exported="true" />
+        <activity
             android:name=".IngameActivityNormal"
             android:exported="true" />
         <activity

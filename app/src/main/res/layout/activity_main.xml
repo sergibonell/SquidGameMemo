@@ -7,11 +7,11 @@
     tools:context=".MainActivity">
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/logo"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
-        android:layout_marginTop="64dp"
-        android:layout_marginBottom="64dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="32dp"
         app:layout_constraintBottom_toTopOf="@+id/play_button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -27,22 +27,22 @@
         android:text="JUGAR"
         android:textSize="32sp"
         app:backgroundTint="@color/primaryColor"
-        app:layout_constraintBottom_toTopOf="@+id/radioGroup"
+        app:layout_constraintBottom_toTopOf="@+id/difficulty_radio_group"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <RadioGroup
-        android:id="@+id/radioGroup"
+        android:id="@+id/difficulty_radio_group"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="32dp"
         android:orientation="horizontal"
-        app:layout_constraintBottom_toTopOf="@+id/floatingActionButton"
+        app:layout_constraintBottom_toTopOf="@+id/help_button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
 
         <RadioButton
-            android:id="@+id/radioButton5"
+            android:id="@+id/easy_radio"
             android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="8dp"
@@ -55,7 +55,7 @@
             android:textColor="@drawable/radio_text" />
 
         <RadioButton
-            android:id="@+id/radioButton4"
+            android:id="@+id/medium_radio"
             android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="8dp"
@@ -68,7 +68,7 @@
             android:textColor="@drawable/radio_text" />
 
         <RadioButton
-            android:id="@+id/radioButton6"
+            android:id="@+id/hard_radio"
             android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="8dp"
@@ -82,7 +82,7 @@
     </RadioGroup>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/floatingActionButton"
+        android:id="@+id/help_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
