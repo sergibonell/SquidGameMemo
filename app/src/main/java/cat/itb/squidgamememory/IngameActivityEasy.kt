@@ -2,30 +2,77 @@ package cat.itb.squidgamememory
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
-import android.view.View
 import android.widget.ImageButton
+import android.widget.Toast
+import java.time.Duration
+import java.util.*
 
 class IngameActivityEasy : AppCompatActivity() {
-    private var cards = mutableListOf<ImageButton>()
-    //TODO: Add sprites to project and initialize array with ids
-    private var boardValues = arrayOf(0, 0, 1, 1, 2, 2)
+    private var cards = mutableListOf<CookieCard>()
+    private var buttons = arrayOf(R.id.card1, R.id.card2, R.id.card3, R.id.card4, R.id.card5, R.id.card6)
+    private var images = arrayOf(R.drawable.circle, R.drawable.star, R.drawable.triangle, R.drawable.circle, R.drawable.star, R.drawable.triangle)
+
+    private var wrongMatch = false
+    private var first : CookieCard? = null
+    private lateinit var second : CookieCard
+    private var score = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_ingame_easy)
 
-        boardValues.shuffle()
-        for (index in 1..6){
-            cards.add(findViewById(resources.getIdentifier("card$index", "id", packageName)))
-            cards[index-1].setOnClickListener { processButtonClick(it, index) }
+        images.shuffle()
+        for (index in 0..5) {
+            cards.add(CookieCard(buttons[index], images[index]))
+            findViewById<ImageButton>(buttons[index]).setOnClickListener { processButtonClick(cards[index]) }
         }
-
     }
 
-    // Cada cop que es clica un botó aquest mètode rep la View del botó i l'índex d'aquest
-    fun processButtonClick(cardButton: View, index: Int){
-        Log.d("DEBUG", cardButton.toString())
-        Log.d("DEBUG", index.toString())
+    fun processButtonClick(cookieCard: CookieCard){
+        if(!cookieCard.girada){
+            if(wrongMatch)
+                undoLastMatch()
+
+            if(first == null)
+                primerClick(cookieCard)
+            else
+                segonClick(cookieCard)
+        }else
+            Toast.makeText(applicationContext, "Invalid move", Toast.LENGTH_SHORT).show()
+    }
+
+    private fun primerClick(cookieCard: CookieCard) {
+        first = cookieCard
+        flipCard(first!!)
+    }
+
+    private fun segonClick(cookieCard: CookieCard) {
+        second = cookieCard
+        flipCard(second)
+        if(first!!.imageId == second.imageId){
+            score++
+            first = null
+        }
+        else
+            wrongMatch = true
+    }
+
+    private fun flipCard(cookieCard: CookieCard){
+        val button = findViewById<ImageButton>(cookieCard.buttonId)
+
+        if(cookieCard.girada)
+            button.setImageResource(R.drawable.empty)
+        else
+            button.setImageResource(cookieCard.imageId)
+
+        cookieCard.girada = !cookieCard.girada
+    }
+
+    private fun undoLastMatch(){
+        flipCard(first!!)
+        flipCard(second)
+        first = null
+        wrongMatch = false
     }
 }
+
