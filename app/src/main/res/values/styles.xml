@@ -2,5 +2,6 @@
 <resources>
     <style name="AlertDialog" parent="Theme.AppCompat.Dialog">
         <item name="android:textColor">@color/white</item>
+        <item name="android:windowBackground">@color/secondaryLightColor</item>
     </style>
 </resources>

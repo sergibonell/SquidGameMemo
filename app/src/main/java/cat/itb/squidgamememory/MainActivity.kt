@@ -55,9 +55,9 @@ class MainActivity : AppCompatActivity() {
 
     private fun startGame() {
         when (difficulty) {
-            Difficulties.Easy -> startActivity(Intent(this, IngameActivityEasy::class.java))
-            Difficulties.Medium -> startActivity(Intent(this, IngameActivityNormal::class.java))
-            Difficulties.Hard -> startActivity(Intent(this, IngameActivityHard::class.java))
+            Difficulties.Easy -> startActivity(Intent(this, IngameEasyActivity::class.java))
+            Difficulties.Medium -> startActivity(Intent(this, IngameNormalActivity::class.java))
+            Difficulties.Hard -> startActivity(Intent(this, IngameHardActivity::class.java))
             Difficulties.None -> Toast.makeText(applicationContext, "Select a difficulty", Toast.LENGTH_SHORT).show()
         }
     }

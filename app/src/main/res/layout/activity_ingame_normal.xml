@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".IngameActivityNormal">
+    tools:context=".IngameNormalActivity">
 
     <TextView
         android:id="@+id/game_timer"
@@ -24,10 +24,10 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="16dp"
-        android:backgroundTint="@color/lightgray"
+        android:backgroundTint="@color/secondaryLightColor"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:srcCompat="@drawable/ic_baseline_pause_24" />
+        app:srcCompat="@drawable/ic_baseline_pause_24_light" />
 
     <ImageButton
         android:id="@+id/card1"
@@ -124,7 +124,7 @@
         android:background="@android:color/transparent"
         android:padding="10dp"
         android:scaleType="fitCenter"
-        app:layout_constraintBottom_toTopOf="@+id/pause_button"
+        app:layout_constraintBottom_toTopOf="@+id/move_counter"
         app:layout_constraintEnd_toStartOf="@id/card8"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/card5"
@@ -139,11 +139,24 @@
         android:background="@android:color/transparent"
         android:padding="10dp"
         android:scaleType="fitCenter"
-        app:layout_constraintBottom_toTopOf="@+id/pause_button"
+        app:layout_constraintBottom_toTopOf="@+id/move_counter"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/card7"
         app:layout_constraintTop_toBottomOf="@+id/card6"
         app:srcCompat="@drawable/empty" />
+
+    <TextView
+        android:id="@+id/move_counter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="Moves: 0"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@id/pause_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/card8" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

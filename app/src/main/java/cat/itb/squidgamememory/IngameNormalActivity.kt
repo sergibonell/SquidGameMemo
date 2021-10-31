@@ -5,7 +5,7 @@ import android.os.Bundle
 import android.widget.ImageButton
 import android.widget.Toast
 
-class IngameActivityNormal : AppCompatActivity() {
+class IngameNormalActivity : AppCompatActivity() {
     private var cards = mutableListOf<CookieCard>()
     private var buttons = arrayOf(R.id.card1, R.id.card2, R.id.card3, R.id.card4, R.id.card5, R.id.card6, R.id.card7, R.id.card8)
     private var images = arrayOf(R.drawable.circle, R.drawable.star, R.drawable.triangle, R.drawable.umbrella, R.drawable.circle, R.drawable.star, R.drawable.triangle, R.drawable.umbrella)

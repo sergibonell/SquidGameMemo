@@ -3,4 +3,6 @@
     <string name="help_dialog_title">Ajuda</string>
     <string name="help_dialog_message">Selecciona una dificultat i apreta el botó \"Jugar\" per començar!\n\n<ul><li><b>Fàcil</b>: Fes parelles en un tauler amb 6 galetes\n</li><li><b>Medium</b>: Fes parelles en un tauler amb 8 galetes\n</li><li><b>Difícil</b>: Fes trios en un tauler amb 9 galetes</li></ul></string>
     <string name="help_dialog_ok">D\'acord</string>
+    <string name="move_counter_text">Moves: %d</string>
+    <string name="score_text">SCORE\n%d</string>
 </resources>
