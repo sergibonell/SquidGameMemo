@@ -5,4 +5,9 @@
     <string name="help_dialog_ok">D\'acord</string>
     <string name="move_counter_text">Moves: %d</string>
     <string name="score_text">SCORE\n%d</string>
+    <string name="move_counter_placeholder">Moves: 0</string>
+    <string name="game_over_text">GAME OVER</string>
+    <string name="paused_text">PAUSED</string>
+    <string name="perfect_score_text">Perfect score!</string>
+    <string name="time_placeholder">0</string>
 </resources>

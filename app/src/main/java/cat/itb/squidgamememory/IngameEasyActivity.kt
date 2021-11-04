@@ -44,7 +44,7 @@ class IngameEasyActivity : AppCompatActivity() {
     }
 
     private fun processButtonClick(i: Int){
-        if(!viewModel.cards[i].girada){
+        if(!viewModel.cards[i].girada or viewModel.wrongMatch){
             if(viewModel.wrongMatch)
                 undoLastFlip()
             if(viewModel.first == null)
