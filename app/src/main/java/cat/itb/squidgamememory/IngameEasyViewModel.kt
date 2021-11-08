@@ -32,12 +32,13 @@ class IngameEasyViewModel : ViewModel() {
     }
 
     fun checkIfMatch(): Boolean{
+        var match = false;
         if(images[first!!] == images[second]){
-            first = null
             matches++
+            match = true;
         }else
             wrongMatch = true
-        return matches == 3
+        return match
     }
 
     fun undoLastFlip(){

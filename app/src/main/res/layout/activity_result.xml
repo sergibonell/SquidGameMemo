@@ -11,56 +11,75 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="32dp"
+        android:layout_marginBottom="8dp"
         android:background="@drawable/radio_selected"
         android:backgroundTint="@color/secondaryLightColor"
         android:textAlignment="center"
         android:textColor="@color/white"
         android:textSize="80sp"
-        app:layout_constraintBottom_toTopOf="@+id/home_button"
+        app:layout_constraintBottom_toTopOf="@+id/perfect_score"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed" />
 
     <TextView
         android:id="@+id/perfect_score"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
         android:text="@string/perfect_score_text"
         android:textColor="#AED581"
         android:textSize="35sp"
         android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/home_button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/score_text" />
+        app:layout_constraintTop_toBottomOf="@+id/score_text" />
 
     <ImageButton
         android:id="@+id/home_button"
-        android:layout_width="158dp"
+        android:layout_width="0dp"
         android:layout_height="70dp"
         android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
         android:backgroundTint="@color/primaryColor"
         android:scaleType="fitCenter"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/share_button"
         app:layout_constraintEnd_toStartOf="@+id/replay_button"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/score_text"
+        app:layout_constraintTop_toBottomOf="@+id/perfect_score"
         app:srcCompat="@drawable/ic_baseline_home_24_dark" />
 
     <ImageButton
         android:id="@+id/replay_button"
-        android:layout_width="173dp"
+        android:layout_width="0dp"
         android:layout_height="70dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="32dp"
         android:backgroundTint="@color/primaryColor"
         android:scaleType="fitCenter"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/share_button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/home_button"
-        app:layout_constraintTop_toBottomOf="@+id/score_text"
+        app:layout_constraintTop_toBottomOf="@+id/perfect_score"
         app:srcCompat="@drawable/ic_baseline_replay_24_dark" />
+
+    <Button
+        android:id="@+id/share_button"
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="8dp"
+        android:backgroundTint="@color/primaryColor"
+        android:text="@string/share_button"
+        android:textSize="35sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/home_button" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

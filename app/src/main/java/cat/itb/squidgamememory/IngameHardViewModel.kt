@@ -33,13 +33,13 @@ class IngameHardViewModel : ViewModel() {
     }
 
     fun checkIfMatch(): Boolean{
+        var match = false
         if(images[first!!] == images[second!!] && images[first!!] == images[third]){
-            first = null
-            second = null
             matches++
+            match = true
         }else
             wrongMatch = true
-        return matches == 3
+        return match
     }
 
     fun undoLastFlip(){

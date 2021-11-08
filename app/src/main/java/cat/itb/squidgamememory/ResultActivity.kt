@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.widget.Button
 import android.widget.ImageButton
 import android.widget.TextView
 
@@ -12,10 +13,12 @@ class ResultActivity : AppCompatActivity() {
     private lateinit var perfectText: TextView
     private lateinit var replayButton: ImageButton
     private lateinit var homeButton: ImageButton
+    private lateinit var shareButton: Button
     private var moves = 0
     private var matches = 0
     private var time = 0
     private var difficulty = 0
+    private var score = 0;
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -25,12 +28,14 @@ class ResultActivity : AppCompatActivity() {
         perfectText = findViewById(R.id.perfect_score)
         replayButton = findViewById(R.id.replay_button)
         homeButton = findViewById(R.id.home_button)
+        shareButton = findViewById(R.id.share_button)
         moves = intent.extras?.getInt("Moves")!!
         matches = intent.extras?.getInt("Matches")!!
         time = intent.extras?.getInt("Time")!!
         difficulty = intent.extras?.getInt("Difficulty")!!
 
-        scoreText.text = getString(R.string.score_text, dataToScore())
+        score = dataToScore()
+        scoreText.text = getString(R.string.score_text, score)
         checkPerfect()
 
         homeButton.setOnClickListener { startActivity(Intent(this, MainActivity::class.java)) }
@@ -40,6 +45,13 @@ class ResultActivity : AppCompatActivity() {
                 2 -> startActivity(Intent(this, IngameNormalActivity::class.java))
                 3 -> startActivity(Intent(this, IngameHardActivity::class.java))
             }
+        }
+        shareButton.setOnClickListener {
+            val shareIntent = Intent()
+            shareIntent.action = Intent.ACTION_SEND
+            shareIntent.type = "text/plain"
+            shareIntent.putExtra(Intent.EXTRA_TEXT, getString(R.string.share_text, score))
+            startActivity(Intent.createChooser(shareIntent, getString(R.string.send_to)))
         }
     }
 
@@ -52,6 +64,7 @@ class ResultActivity : AppCompatActivity() {
             perfectText.visibility = View.VISIBLE
     }
 
+    //TODO: find a better formula for this, no negative numbers if possible :)
     private fun dataToScore(): Int{
         return matches * 100 + time * 10 - moves * 30
     }

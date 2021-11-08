@@ -7,6 +7,8 @@ import android.os.CountDownTimer
 import android.os.Handler
 import android.os.Looper
 import android.view.View
+import android.view.animation.Animation
+import android.view.animation.AnimationUtils
 import android.widget.ImageButton
 import android.widget.TextView
 import android.widget.Toast
@@ -21,6 +23,7 @@ class IngameNormalActivity : AppCompatActivity() {
     private lateinit var pauseButton: ImageButton
     private lateinit var viewModel : IngameNormalViewModel
     private lateinit var timer: CountDownTimer
+    private lateinit var shakeAnimation: Animation
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -32,6 +35,7 @@ class IngameNormalActivity : AppCompatActivity() {
         gameOverText = findViewById(R.id.game_over_text)
         pauseText = findViewById(R.id.pause_text)
         pauseButton = findViewById(R.id.pause_button)
+        shakeAnimation = AnimationUtils.loadAnimation(this, R.anim.shake)
 
         for (i in 0..7) {
             buttons.add(findViewById(viewModel.cards[i].buttonId))
@@ -57,15 +61,20 @@ class IngameNormalActivity : AppCompatActivity() {
 
     private fun primerClick(i: Int) {
         viewModel.first = i
-        flipCard(viewModel.first!!)
+        flipCard(i)
     }
 
     private fun segonClick(i: Int) {
         viewModel.second = i
         addMove()
         flipCard(i)
-        if(viewModel.checkIfMatch())
-            goToFinishActivity()
+        if(viewModel.checkIfMatch()){
+            findViewById<ImageButton>(viewModel.cards[viewModel.first!!].buttonId).startAnimation(shakeAnimation)
+            findViewById<ImageButton>(viewModel.cards[viewModel.second].buttonId).startAnimation(shakeAnimation)
+            viewModel.first = null
+            if(viewModel.matches == 4)
+                goToFinishActivity()
+        }
     }
 
     private fun flipCard(i: Int){

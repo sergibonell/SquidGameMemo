@@ -9,6 +9,12 @@ import android.widget.Button
 import android.widget.RadioGroup
 import android.widget.Toast
 import com.google.android.material.floatingactionbutton.FloatingActionButton
+import android.graphics.Typeface
+
+import android.widget.TextView
+import androidx.core.content.ContentProviderCompat.requireContext
+import androidx.core.content.res.ResourcesCompat
+
 
 class MainActivity : AppCompatActivity() {
     private lateinit var difficultyRadioGroup: RadioGroup
@@ -34,6 +40,7 @@ class MainActivity : AppCompatActivity() {
             }
             .setCancelable(true)
             .create()
+
 
         difficultyRadioGroup.setOnCheckedChangeListener{ _, checkedId ->
             if (checkedId == R.id.easy_radio)
