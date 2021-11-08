@@ -13,7 +13,6 @@
         android:layout_marginTop="16dp"
         android:text="@string/time_placeholder"
         android:textSize="30sp"
-        android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -24,7 +23,6 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="16dp"
-        android:backgroundTint="@color/secondaryLightColor"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:srcCompat="@drawable/ic_baseline_pause_24_light" />
@@ -164,7 +162,6 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
         android:text="@string/move_counter_placeholder"
-        android:textColor="@color/white"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@id/card9"
