@@ -7,6 +7,7 @@ import android.view.View
 import android.widget.Button
 import android.widget.ImageButton
 import android.widget.TextView
+import kotlin.math.pow
 
 class ResultActivity : AppCompatActivity() {
     private lateinit var scoreText : TextView
@@ -64,8 +65,12 @@ class ResultActivity : AppCompatActivity() {
             perfectText.visibility = View.VISIBLE
     }
 
-    //TODO: find a better formula for this, no negative numbers if possible :)
     private fun dataToScore(): Int{
-        return matches * 100 + time * 10 - moves * 30
+        val bestCase = when(difficulty){
+            1, 3 -> 3
+            2 -> 4
+            else -> 0
+        }
+        return ((matches * 200f/bestCase) + (800 * 0.95.pow(moves - 3) * (time.toFloat()/30))).toInt()
     }
 }
