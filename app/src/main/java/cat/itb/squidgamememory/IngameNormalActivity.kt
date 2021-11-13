@@ -117,7 +117,7 @@ class IngameNormalActivity : AppCompatActivity() {
         intent.putExtra("Matches", viewModel.matches)
         intent.putExtra("Time", viewModel.time)
         intent.putExtra("Difficulty", 2)
-        Handler(Looper.getMainLooper()).postDelayed( { startActivity(intent) }, 2000)
+        Handler(Looper.getMainLooper()).postDelayed( { startActivity(intent); finish() }, 2000)
     }
 
     private fun startTimer(){
