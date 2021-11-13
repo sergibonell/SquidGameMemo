@@ -2,7 +2,7 @@
     <!-- Base application theme. -->
     <style name="Theme.SquidGameMemory" parent="Theme.MaterialComponents.Light.NoActionBar">
         <!-- Primary brand color. -->
-        <item name="android:background">@color/secondaryColor</item>
+        <item name="android:windowBackground">@color/lightColor</item>
         <item name="colorPrimary">@color/purple_500</item>
         <item name="colorPrimaryVariant">@color/purple_700</item>
         <item name="colorOnPrimary">@color/white</item>
@@ -13,9 +13,12 @@
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
+        <item name="android:textColor">@color/black</item>
+        <item name="fontFamily">@font/squid_game</item>
     </style>
-    
-    <style name="Theme.SquidGameMemory.Launcher">
-        <item name="android:windowBackground">@drawable/splash_screen</item>
+
+    <style name="Theme.SquidGameMemory.Launcher" parent="Theme.SquidGameMemory">
+        <item name="android:windowBackground">@drawable/splash_screen_light</item>
+        <item name="backgroundColor">@color/lightColor</item>
     </style>
 </resources>

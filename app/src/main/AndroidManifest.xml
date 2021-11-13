@@ -10,13 +10,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SquidGameMemory">
         <activity
-            android:name=".IngameActivityNormal"
+            android:name=".IngameHardActivity"
+            android:exported="true" />
+        <activity
+            android:name=".IngameNormalActivity"
             android:exported="true" />
         <activity
             android:name=".ResultActivity"
             android:exported="true" />
         <activity
-            android:name=".IngameActivityEasy"
+            android:name=".IngameEasyActivity"
             android:exported="true" />
         <activity
             android:name=".MainActivity"
@@ -24,7 +27,6 @@
             android:theme="@style/Theme.SquidGameMemory.Launcher">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

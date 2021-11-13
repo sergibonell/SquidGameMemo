@@ -6,11 +6,23 @@
       <GradleProjectSettings>
         <option name="testRunner" value="GRADLE" />
         <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="/dades/dades/SergiBonell/Software/android-projects/squidgamememo" />
+        <option name="modules">
+          <set>
+            <option value="/dades/dades/SergiBonell/Software/android-projects/squidgamememo" />
+            <option value="/dades/dades/SergiBonell/Software/android-projects/squidgamememo/app" />
+          </set>
+        </option>
+        <option name="resolveModulePerSourceSet" value="false" />
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="testRunner" value="GRADLE" />
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="modules">
           <set>
-            <option value="/dades/dades/SergiBonell/Software/android-projects/SquidGameMemory" />
-            <option value="/dades/dades/SergiBonell/Software/android-projects/SquidGameMemory/app" />
+            <option value="/dades/dades/SergiBonell/Software/android-projects/squidgamememo" />
+            <option value="/dades/dades/SergiBonell/Software/android-projects/squidgamememo/app" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
