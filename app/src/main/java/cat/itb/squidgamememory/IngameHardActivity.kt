@@ -58,7 +58,7 @@ class IngameHardActivity : AppCompatActivity() {
             else
                 tercerClick(i)
         }else
-            Toast.makeText(applicationContext, "Invalid move", Toast.LENGTH_SHORT).show()
+            Toast.makeText(applicationContext, getString(R.string.invalid_move_text), Toast.LENGTH_SHORT).show()
     }
 
     private fun primerClick(i: Int) {

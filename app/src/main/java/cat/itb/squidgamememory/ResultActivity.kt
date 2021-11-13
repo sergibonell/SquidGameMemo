@@ -39,13 +39,14 @@ class ResultActivity : AppCompatActivity() {
         scoreText.text = getString(R.string.score_text, score)
         checkPerfect()
 
-        homeButton.setOnClickListener { startActivity(Intent(this, MainActivity::class.java)) }
+        homeButton.setOnClickListener { startActivity(Intent(this, MainActivity::class.java)); finish() }
         replayButton.setOnClickListener {
             when(intent.extras?.getInt("Difficulty")){
                 1 -> startActivity(Intent(this, IngameEasyActivity::class.java))
                 2 -> startActivity(Intent(this, IngameNormalActivity::class.java))
                 3 -> startActivity(Intent(this, IngameHardActivity::class.java))
             }
+            finish()
         }
         shareButton.setOnClickListener {
             val shareIntent = Intent()

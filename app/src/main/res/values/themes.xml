@@ -19,6 +19,6 @@
 
     <style name="Theme.SquidGameMemory.Launcher" parent="Theme.SquidGameMemory">
         <item name="android:windowBackground">@drawable/splash_screen_light</item>
-        <item name="backgroundColor">@color/white</item>
+        <item name="backgroundColor">@color/lightColor</item>
     </style>
 </resources>
