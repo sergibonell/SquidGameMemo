@@ -154,5 +154,10 @@ class IngameEasyActivity : AppCompatActivity() {
         pauseText.visibility = View.INVISIBLE
         viewModel.isPaused = false
     }
+
+    override fun onBackPressed() {
+        super.onBackPressed()
+        finish()
+    }
 }
 
