@@ -72,6 +72,6 @@ class ResultActivity : AppCompatActivity() {
             2 -> 4
             else -> 0
         }
-        return ((matches * 200f/bestCase) + (800 * 0.95.pow(moves - 3) * (time.toFloat()/30))).toInt()
+        return ((matches * 200f/bestCase) + (800 * 0.95.pow(moves - bestCase) * (time.toFloat()/30))).toInt()
     }
 }

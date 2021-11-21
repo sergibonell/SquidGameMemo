@@ -8,7 +8,7 @@
     <string name="move_counter_placeholder">Moves: 0</string>
     <string name="game_over_text">GAME OVER</string>
     <string name="paused_text">PAUSA</string>
-    <string name="perfect_score_text">Perfect score!</string>
+    <string name="perfect_score_text">Perfect!</string>
     <string name="time_placeholder">0</string>
     <string name="share_button">SHARE</string>
     <string name="share_text">Acabo de conseguir una puntuació de %d al Squid Memo (https://www.youtube.com/watch?v=dQw4w9WgXcQ)</string>

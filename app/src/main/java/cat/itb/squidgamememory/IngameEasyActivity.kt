@@ -157,7 +157,7 @@ class IngameEasyActivity : AppCompatActivity() {
 
     override fun onBackPressed() {
         super.onBackPressed()
-        finish()
+        timer.cancel()
     }
 }
 
